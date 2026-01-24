@@ -40,7 +40,7 @@ void loop() {
 
   int rawI2 = analogRead(currentPin2);
   float sensorVoltage2 = (rawI2 * 5.0) / 1023.0;
-  data.current2 = (sensorVoltage - zeroCurrentVoltage) / sensitivity;
+  data.current2 = (sensorVoltage2 - zeroCurrentVoltage) / sensitivity;
 
   bool ok = radio.write(&data, sizeof(data));
 
